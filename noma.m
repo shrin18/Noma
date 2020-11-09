@@ -1,9 +1,12 @@
 % Create parameters and random users
+%No. of users
 Users = 20;
 W = 20; % Bandwidth Mhz
 Pdis = 10; % BS Sector Power Watios
 P = Pdis/W; % Spectral power density W/Mhz
 Radio = 1000; % Meters
+
+
 k = 1.3806488*10^-23;
 T = 290; % Kelvin
 F = 3.6*10^9; % Hz
@@ -13,9 +16,12 @@ azimuth = 2*pi*rand(Users,1); % Radians
 radio = Radio*rand(Users,1); % Meters
 [x,y] = pol2cart(azimuth,radio);
 figure
+
 plot(x,y,'.')
 hold on
+
 viscircles([0 0],1000);
+
 % Divide the cell in sectors
 AreaUsers = zeros(Users,1);
 rhosArea = cell(5,1);
