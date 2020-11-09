@@ -74,7 +74,6 @@ end
 UsersArea = [Users1 Users2 Users3 Users4 Users5];
 
 % Calculate power coefficients for each area/sector (Max. 10users per sector) and bandwidth per user
-
 % (OFDMA)
 powers = cell(5,1);
 bandwidths = zeros(5,1);
